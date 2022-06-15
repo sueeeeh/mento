@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        const showUserInfo = document.getElementById("#root")
+        const UserList = []
+
+        let user = [
+            {
+                name : 'john',
+                age : 20
+            },
+            {
+                name : 'mark',
+                age : 15
+            },
+            {
+                name : 'sebastian',
+                age : 28
+            }
+        ]
+
+        //console.log(user[0].name)
+
+        for (let i = 0; i < user.length; i++) {
+            UserList.push(`
+              <div style="width: 200px; padding: 20px; background-color: #7b9acc;">
+
+             <h1>${user[i].name}님은 ${user[i].age}살입니다.</h1>
+          
+              </div>
+          `);
+        }
+        showUserInfo.innerHTML = UserList;
+54
+
+    </script>
+</body>
+</html>
